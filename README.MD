@@ -61,13 +61,16 @@ dx build
 
 The app will apear in the DNAnexus.
 
-# Running the app
+## Running the app
 
 The app requires two inputs, which are:
 
 * DNAnexus Project ID 
 * Project type - choise of the following options (WES, SNP, TSO500, MokaPipe)
 
+## Processing the CSV email 
+
+Intructions to process the csv containing DNAnexus download links can be found in process_csv_on_TrustPC_windows folder
 
 ## Additional infomration 
 

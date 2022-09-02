@@ -25,7 +25,6 @@ mokaguys_email = "gst-tr.mokaguys@nhs.net"
 #host = "relay.gstt.local"
 #port = 25
 email_send_from = "moka.alerts@gstt.nhs.uk"
-email_send_to = 'igor.malashchuk@nhs.net'#mokaguys_email
-email_send_test = 'igor.malashchuk@nhs.net'
+email_send_to = mokaguys_email
 smtp_do_tls = True
 

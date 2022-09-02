@@ -23,8 +23,8 @@ def ask_for_folder():
     Therefore this function ask the user to enter the last part of the folder
     """
     output_folder = ""
-    #path_worksheets = "P:\\DNA LAB\\Current\\NGS worksheets\\"
-    path_worksheets = "H:\\Tickets\\automate_end_of_duty_tasks\\Results\\"
+    path_worksheets = "P:\\DNA LAB\\Current\\NGS worksheets\\"
+    #path_worksheets = "H:\\Tickets\\automate_end_of_duty_tasks\\Results\\"
     print("Part of destination is:{}".format(path_worksheets))
     while len(output_folder) == 0:
         output_folder = input(
@@ -161,8 +161,8 @@ class Project:
         """
         Process WES Runs
         """
-        #destination_of_files = "S:\\Genetics\\Bioinformatics\\NGS\\depthofcoverage\\genesummaries"
-        destination_of_files = "H:\\Tickets\\TEST\\genesumarries"
+        destination_of_files = "S:\\Genetics\\Bioinformatics\\NGS\\depthofcoverage\\genesummaries"
+        #destination_of_files = "H:\\Tickets\\TEST\\genesumarries"
         for file_path in self.project_files:
             csv_file = pandas.read_csv(file_path, index_col=None)
             url_wes = get_data(csv_file, '"{}"'.format(destination_of_files))
@@ -174,8 +174,8 @@ class Project:
         """
         Process SNP Runs
         """
-        #destination_of_VCFs = "P:\\Bioinformatics\\VCFs_Andrew"
-        destination_of_VCFs = "H:\\Tickets\\TEST\\VCFs_Andrew"
+        destination_of_VCFs = "P:\\Bioinformatics\\VCFs_Andrew"
+        #destination_of_VCFs = "H:\\Tickets\\TEST\\VCFs_Andrew"
         for file_path in self.project_files:
             csv_file = pandas.read_csv(file_path, index_col=None)
             url_snp = get_data(csv_file, '"{}"'.format(destination_of_VCFs))
@@ -188,8 +188,8 @@ class Project:
         Process MokaPipe Runs
         """
         # Path to St George's transfer folder
-        #StG_transfer = "P:\\DNA LAB\\StG SFTP\\StG SFTP outgoing"
-        StG_transfer = 'H:\\Tickets\\automate_end_of_duty_tasks\\Results\\StG_outgoing'
+        StG_transfer = "P:\\DNA LAB\\StG SFTP\\StG SFTP outgoing"
+        #StG_transfer = 'H:\\Tickets\\automate_end_of_duty_tasks\\Results\\StG_outgoing'
         for file_path in self.project_files:
             # asks for final part to the destination folder
             output_folder = ask_for_folder()
