@@ -1,10 +1,12 @@
 """
 Process duty emails
-Version 2.0.0
 Developer: Igor Malashchuk 
 Email: igor.malashchuk@nhs.net
-Date Modified: 08/08/2022
+Date Modified: 02/09/2022
 """
+
+version = "2.0.0"
+
 import subprocess
 import os
 import re
@@ -14,9 +16,16 @@ import pandas
 import math
 import numpy as np
 
-# Run script in Powershell: duty
-# run script in command prompt: S:\Genetics_Data2\Array\Software\Python-3.6.5\python S:\Genetics_Data2\Array\Software\duty_bioinformatician_scripts\process_duty_email.py
-version = "2.0.0"
+'''
+This script is located in the following location on the Trust PC:
+
+S:\Genetics_Data2\Array\Software\duty_bioinformatician_scripts
+
+Run script in Powershell: duty
+
+run script in command prompt: S:\Genetics_Data2\Array\Software\Python-3.6.5\python S:\Genetics_Data2\Array\Software\duty_bioinformatician_scripts\process_duty_email.py
+'''
+
 def ask_for_folder():
     """
     For MokaPipe the destination folder can be different.
@@ -51,8 +60,9 @@ def get_data(df, path_to_folder):
 def download_data(all_urls):
     """"
     This function checks if the string argument is less than the limit. 
-    If it is longer than the character length limit thee string is split into multiple smaller string arguments. 
+    If the string is longer than the character length limit then the string is split into multiple smaller string arguments. 
     The function then downloads the data using powershell.
+    The PowerShell output is captured for production of a logfile. 
     """
     limit = 8000
     result = math.ceil(len(all_urls)/limit)
