@@ -70,7 +70,7 @@ The app requires two inputs, which are:
 
 ## Processing the CSV email 
 
-Intructions to process the csv containing DNAnexus download links can be found in process_csv_on_TrustPC_windows folder
+Intructions to process the csv containing DNAnexus download links can be found in [process_csv_on_TrustPC_windows](https://github.com/moka-guys/Automate_Duty/tree/develop/process_csv_on_TrustPC_windows) folder
 
 ## Additional infomration 
 
