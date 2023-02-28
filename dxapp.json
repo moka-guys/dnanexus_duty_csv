@@ -1,59 +1,57 @@
 {
-    "name": "Automate_Duty v2.0.0",
-    "summary": "v2.0.0 - uses a python script to search for files required for Dry Lab transfer, creates a CSV file with URL links for the files and sends an email to MokaGuys",
-    "properties": {
-      "github release": "v2.0.0"
+  "name": "duty_csv",
+  "summary": "Uses a python script to search for files required for Dry Lab transfer, creates a CSV file with URL links for the files and sends an email to MokaGuys",
+  "properties": {
+    "github release": "v1.0.0"
+  },
+  "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "DNAnexus_Project_ID",
+      "label": "DNAnexus Project ID",
+      "help": "enter the DNAnexus Project ID",
+      "class": "string"
     },
-    "dxapi": "1.0.0",
-    "inputSpec": [
-        {
-          "name": "DNAnexus_Project_ID",
-          "label": "DNAnexus Project ID",
-          "help": "enter the DNAnexus Project ID",
-          "class": "string"
-        },
-        {
-            "name": "project_type",
-            "label": "Type of Project",
-            "help": "Type of project: WES, SNP, TSO500, MokaPpe",
-            "class": "string",
-            "choices": [
-                "WES",
-                "SNP",
-                "MokaPipe",
-                "TSO500"
-            ]
-        }
-    ],
-    "outputSpec": [
-      {
-        "name": "Email_with_CSV_attachment",
-        "label": "Email_with_CSV_attachment",
-        "class": "file",
-        "help": "URL links are saved in a csv file which is sent to MokaGuys for processing by Duty Bioinformatician",
-        "optional": true
-      }
-    ],
-    "runSpec": {
-      "execDepends": [
-      ],
-      "assetDepends": [
-      ],
-      "systemRequirements": {
-        "*": {
-          "instanceType": "mem1_ssd1_x2"
-        }
-      },
-      "file": "src/code.sh",
-      "release": "20.04",
-      "version": "0",
-      "interpreter": "bash",
-      "distribution": "Ubuntu"
-    },
-    "access": {
-      "allProjects": "VIEW",
-      "network": [
-        "*"
+    {
+      "name": "project_type",
+      "label": "Type of Project",
+      "help": "Type of project, select from available choices",
+      "class": "string",
+      "choices": [
+        "WES",
+        "SNP",
+        "MokaPipe",
+        "TSO"
       ]
     }
+  ],
+  "outputSpec": [
+    {
+      "name": "logfile",
+      "label": "logfile",
+      "class": "file",
+      "help": "Log file for audit trail",
+      "optional": false
+    }
+  ],
+  "runSpec": {
+    "execDepends": [],
+    "assetDepends": [],
+    "systemRequirements": {
+      "*": {
+        "instanceType": "mem1_ssd1_x2"
+      }
+    },
+    "file": "src/code.sh",
+    "release": "20.04",
+    "version": "0",
+    "interpreter": "bash",
+    "distribution": "Ubuntu"
+  },
+  "access": {
+    "allProjects": "VIEW",
+    "network": [
+      "*"
+    ]
   }
+}

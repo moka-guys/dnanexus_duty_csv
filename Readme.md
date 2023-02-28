@@ -1,4 +1,4 @@
-# Automate Duty v2.0.0
+# Automate Duty
 
 ## What does this app do?
 
