@@ -1,0 +1,85 @@
+{
+  "name": "duty_csv_v1.0.0",
+  "summary": "Uses a python script to search for files required for Dry Lab transfer, creates a CSV file with URL links for the files and sends an email to MokaGuys",
+  "properties": {
+    "github release": "v1.0.0"
+  },
+  "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "project_name",
+      "label": "DNAnexus project name",
+      "help": "Name of the DNAnexus project name to generate the CSV file for",
+      "class": "string"
+    },
+    {
+      "name": "tso_pannumbers",
+      "label": "TSO pan numbers",
+      "help": "Comma separated string. These are used by the app to define Synnovis TSO pan numbers (we only need to download Synnovis pan numbers to the GSTT network)",
+      "class": "array:string"
+    },
+    {
+      "name": "stg_pannumbers",
+      "label": "St George's pan numbers",
+      "help": "Comma separated string. These are used by the app to determine which files need to be downloaded to the St George's area and which need to be downloaded to the Synnovis area",
+      "class": "array:string"
+    },
+    {
+      "name": "cp_capture_pannos",
+      "label": "Synnovis Custom Panels whole capture pan numbers",
+      "help": "Comma separated string. These are used by the app to determine which files need to be downloaded to both the St George's area and the Synnovis area",
+      "class": "array:string"
+    },
+    {
+      "name": "testing",
+      "label": "Test mode flag",
+      "help": "Set as true if you are running this app in test mode - it generates test-specific download paths",
+      "class": "boolean",
+      "default": false,
+      "optional": true
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "logfile",
+      "label": "logfile",
+      "class": "file",
+      "help": "Log file for audit trail",
+      "optional": false
+    },
+    {
+      "name": "csv",
+      "label": "csv",
+      "class": "file",
+      "help": "CSV file containing DNAnexus URLs",
+      "optional": true
+    },
+    {
+      "name": "html",
+      "label": "html",
+      "class": "file",
+      "help": "HTML file used for email message",
+      "optional": false
+    }
+  ],
+  "runSpec": {
+    "execDepends": [],
+    "assetDepends": [],
+    "systemRequirements": {
+      "*": {
+        "instanceType": "mem1_ssd1_v2_x2"
+      }
+    },
+    "file": "src/code.sh",
+    "release": "20.04",
+    "version": "0",
+    "interpreter": "bash",
+    "distribution": "Ubuntu"
+  },
+  "access": {
+    "allProjects": "VIEW",
+    "network": [
+      "*"
+    ]
+  }
+}
