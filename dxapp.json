@@ -1,8 +1,8 @@
 {
-  "name": "duty_csv_v1.0.0",
+  "name": "duty_csv_v1.1.0",
   "summary": "Uses a python script to search for files required for Dry Lab transfer, creates a CSV file with URL links for the files and sends an email to MokaGuys",
   "properties": {
-    "github release": "v1.0.0"
+    "github release": "v1.1.0"
   },
   "dxapi": "1.0.0",
   "inputSpec": [
