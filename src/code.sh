@@ -6,9 +6,9 @@ function main() {
     dx-download-all-inputs --parallel
 
     # Get secrets
-    AMAZON_U=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:file-GFBj2B80Z0gQkgxp31v1Qjpk)
-    AMAZON_PW=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:file-GFBj2vj0Z0gg64F222p5PQzk)
-    AUTH_TOKEN=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:file-GB8PPx00Z0gxq9xbFkZz2q69)
+    AMAZON_U=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:amazon_email_server_username)
+    AMAZON_PW=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:amazon_email_server_password)
+    AUTH_TOKEN=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:mokaguys_nexus_auth_key)
 
     # Get project ID form project name
     if (dx find projects --auth $AUTH_TOKEN | grep $project_name);
@@ -27,7 +27,7 @@ function main() {
     
     mkdir -p $CSV_OUTDIR $HTML_OUTDIR $LOGFILE_OUTDIR # Create in and out dirs
 
-    DOCKER_FILEID='project-ByfFPz00jy1fk6PjpZ95F27J:file-GQB89GQ0jy1bb0Jbp7bgx2jv'
+    DOCKER_FILEID='project-ByfFPz00jy1fk6PjpZ95F27J:file-GQg8XZQ0kPYQvVy5PPY1jKP5'
     dx download $DOCKER_FILEID
     DOCKER_FILENAME=$(dx describe $DOCKER_FILEID --name)
     # --force-local required as if tarfile name contains a colon it tries to resolve the tarfile to a machine name
