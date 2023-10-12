@@ -27,7 +27,7 @@ function main() {
     
     mkdir -p $CSV_OUTDIR $HTML_OUTDIR $LOGFILE_OUTDIR # Create in and out dirs
 
-    DOCKER_FILEID='project-ByfFPz00jy1fk6PjpZ95F27J:file-GQg8XZQ0kPYQvVy5PPY1jKP5'
+    DOCKER_FILEID='project-ByfFPz00jy1fk6PjpZ95F27J:file-GZY9vFj0jy1q7vKz2x2KvqBG'
     dx download $DOCKER_FILEID
     DOCKER_FILENAME=$(dx describe $DOCKER_FILEID --name)
     # --force-local required as if tarfile name contains a colon it tries to resolve the tarfile to a machine name
