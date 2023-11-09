@@ -1,6 +1,6 @@
 # DNAnexus Duty CSV
 
-This is the DNAnexus implementation of [duty_csv v2.2.0](https://github.com/moka-guys/duty_csv/releases/tag/v2.2.0). It is intended to run at the end of all DNAnexus workflows. For further details on what the underlying script does and produces, please refer to that repository.
+This is the DNAnexus implementation of [duty_csv v2.3.0](https://github.com/moka-guys/duty_csv/releases/tag/v2.3.0). It is intended to run at the end of all DNAnexus workflows. For further details on what the underlying script does and produces, please refer to that repository.
 
 ## Inputs
 
@@ -23,6 +23,6 @@ This app sends an email to mokaguys containg a csv file attachment with URL link
 
 ## How does this app work?
 
-* This app runs a python script located inside a docker image. 
+* This app runs a python script located inside a docker image.
 
 ## Developed by the Synnovis Genome Informatics Team
