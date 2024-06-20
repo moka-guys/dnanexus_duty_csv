@@ -1,8 +1,8 @@
 {
-  "name": "duty_csv_v1.3.0",
+  "name": "duty_csv_v1.4.0",
   "summary": "Uses a python script to search for files required for Dry Lab transfer, creates a CSV file with URL links for the files and sends an email to MokaGuys",
   "properties": {
-    "github release": "v1.3.0"
+    "github release": "v1.4.0"
   },
   "dxapi": "1.0.0",
   "inputSpec": [
@@ -49,17 +49,24 @@
     },
     {
       "name": "csv",
-      "label": "csv",
+      "label": "DNAnexus URLs csv",
       "class": "file",
       "help": "CSV file containing DNAnexus URLs",
       "optional": true
     },
     {
       "name": "html",
-      "label": "html",
+      "label": "Email html",
       "class": "file",
       "help": "HTML file used for email message",
       "optional": false
+    },
+    {
+      "name": "txt",
+      "label": "Chrome downloads txt file",
+      "class": "file",
+      "help": "TXT file containing the chrome downloads commands",
+      "optional": true
     }
   ],
   "runSpec": {
