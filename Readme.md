@@ -1,6 +1,6 @@
 # DNAnexus Duty CSV
 
-This is the DNAnexus implementation of [duty_csv v2.3.0](https://github.com/moka-guys/duty_csv/releases/tag/v2.3.0). It is intended to run at the end of all DNAnexus workflows. For further details on what the underlying script does and produces, please refer to that repository.
+This is the DNAnexus implementation of [duty_csv v2.4.0](https://github.com/moka-guys/duty_csv/releases/tag/v2.4.0). It is intended to run at the end of all DNAnexus workflows. For further details on what the underlying script does and produces, please refer to that repository.
 
 ## Inputs
 
@@ -17,6 +17,7 @@ The app takes the following inputs:
 The app sends an email to config-specified address, and produces the following outputs:
 * CSV (optional) - file containing DNAnexus URLs
 * HTML - used for email message
+* TXT - text file containing chrome downloads commands
 * Logfile - for audit trail
   
 This app sends an email to mokaguys containg a csv file attachment with URL links for files required to be transfered to Dry Lab by the Duty Bioinformatician
