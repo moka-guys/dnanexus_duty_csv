@@ -10,7 +10,7 @@ function main() {
     AMAZON_PW=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:amazon_email_server_password)
     AUTH_TOKEN=$(dx cat project-FQqXfYQ0Z0gqx7XG9Z2b4K43:mokaguys_nexus_auth_key)
 
-    # Get project ID form project name
+    # Get project ID from project name
     if (dx find projects --auth "${AUTH_TOKEN}" | grep "${project_name}");
         then
             echo "Project $project_name exists"
@@ -28,7 +28,7 @@ function main() {
     
     mkdir -p $CSV_OUTDIR $HTML_OUTDIR $LOGFILE_OUTDIR $TXT_OUTDIR # Create in and out dirs
 
-    DOCKER_FILEID='project-ByfFPz00jy1fk6PjpZ95F27J:file-GkkzFq00jy1j4G1pPJQFyjkx'
+    DOCKER_FILEID='project-ByfFPz00jy1fk6PjpZ95F27J:file-Gp74Jp00jy1v1ZjP0pyBB05f'
     dx download $DOCKER_FILEID
     DOCKER_FILENAME=$(dx describe $DOCKER_FILEID --name)
     # --force-local required as if tarfile name contains a colon it tries to resolve the tarfile to a machine name

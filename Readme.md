@@ -1,6 +1,6 @@
 # DNAnexus Duty CSV
 
-This is the DNAnexus implementation of [duty_csv v2.4.0](https://github.com/moka-guys/duty_csv/releases/tag/v2.4.0). It is intended to run at the end of all DNAnexus workflows. For further details on what the underlying script does and produces, please refer to that repository.
+This is the DNAnexus implementation of [duty_csv v2.5.0](https://github.com/moka-guys/duty_csv/releases/tag/v2.5.0). It is intended to run at the end of all DNAnexus workflows. For further details on what the underlying script does and produces, please refer to that repository.
 
 ## Inputs
 
